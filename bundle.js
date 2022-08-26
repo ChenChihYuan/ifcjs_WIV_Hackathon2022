@@ -121460,7 +121460,14 @@ Load();
 
 async function Load(){
     const model = await viewer.IFC.loadIfcUrl('./02.ifc'); 
-
     await viewer.shadowDropper.renderShadow(model.modelID);
     viewer.context.renderer.postProduction.active = true;
 }
+
+console.log(viewer);
+console.log(viewer.context);
+console.log(viewer.context.getCamera());
+console.log(viewer.context.scene);
+console.log(viewer.context.renderer);
+console.log(viewer.context.getCamera().controls );
+console.log(viewer.controls);
